@@ -24,6 +24,9 @@ def show_contact(args, contacts):
         return contacts[name]
     else:
         return "No such contact"
+    
+def show_all(contacts):
+    return contacts
 
 
 def main():
@@ -50,7 +53,7 @@ def main():
             print(show_contact(args, contacts))
 
         elif command == "all":
-            print(contacts)
+            print(show_all(contacts))
 
         else:
             print("Invalid command.")

@@ -1,17 +1,13 @@
 def get_cats_info(path):
     info = []
-    dict = {"id": "", "name": "", "age": ""}
     with open(path, 'r') as file:
         for line in file:
             id, name, age = line.strip().split(',')
-            dict['id'] = id
-            dict['name'] = name
-            dict['age'] = age
-
-
-            info.append(dict)
-
-
+            info.append({
+                'id': id,
+                'name': name,
+                'age': int(age)
+            })
     return info
 
 
